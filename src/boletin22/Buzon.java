@@ -40,9 +40,6 @@ public class Buzon {
                 corre.setLeido(true);
                 break;
             }
-            else{
-                JOptionPane.showMessageDialog(null,"No tiene correos por leer");
-            }
         }
     }
     public void mostrar(ArrayList<Correos> cor,int posicion){
@@ -54,6 +51,10 @@ public class Buzon {
 
     }
     public void eliminar(ArrayList<Correos>cor,int posicion){
-        cor.remove(posicion);
+        for(Correos corre:cor){
+            if(cor.contains(posicion-1)){
+                cor.remove(corre);
+            }
+        }
     }
 }
