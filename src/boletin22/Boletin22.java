@@ -26,7 +26,7 @@ public class Boletin22 {
         switch(opcion.toLowerCase()){
             case "nuevo": obx.Correo(corre);
                           break;
-            case "total correos": obx.numeroDeCorreos(corre);
+            case "total correos": System.out.println(obx.numeroDeCorreos(corre));
                                   break;
             case "no leidos": boolean si=obx.porLeer(corre);
                               if(si==true){
@@ -36,7 +36,7 @@ public class Boletin22 {
                                   JOptionPane.showMessageDialog(null,"No tiene correos por leer");
                               }
                               break;
-            case "mostrar correo no leido": obx.mostrarNoLeidoPrimero(corre);
+            case "mostrar correo no leido": System.out.println(obx.mostrarNoLeidoPrimero(corre));
                                             break;
             case "mostrar seleccionado": int posicion=PedirDatos.entero("Introduzca que correo desea visualizar");
                                          obx.mostrar(corre, posicion);
